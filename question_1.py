@@ -1,4 +1,8 @@
-# Q1) Given two arrays arr1 and arr2, the task is to find a union between these two arrays. Union of the two arrays can be defined as the set containing distinct elements from both arrays. If there are repetitions, then only one occurrence of an element should be counted in the union.
+# Q1) Given two arrays arr1 and arr2, the task is to find a union 
+# between these two arrays. Union of the two arrays can be defined as 
+# the set containing distinct elements from both arrays. If there are 
+# repetitions, then only one occurrence of an element should be counted 
+# in the union.
 
 #def union(arr1, arr2):
 # #write code
