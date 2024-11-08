@@ -1,4 +1,6 @@
-'''Q2) Given an unsorted array arr having both negative and positive integers. The task is to place all negative elements at the end of the array without changing the order of positive and negative elements.
+'''Q2) Given an unsorted array arr having both negative and positive 
+integers. The task is to place all negative elements at the end of the 
+array without changing the order of positive and negative elements.
 
 def ordering(arr):
     #write code
