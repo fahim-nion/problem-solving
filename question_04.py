@@ -7,9 +7,11 @@ return arr
 
 Sample Input and Output:
 [1, 3] , [2]  ⇒  return [2, 3, 1]
-Explanation: merged array = [1, 2, 3] and the median is 2. rotate right 2 times = [2, 3, 1] 
+Explanation: merged array = [1, 2, 3] and the median is 2. 
+rotate right 2 times = [2, 3, 1] 
 [1, 2] , [3,4] ⇒  return [3, 4, 1, 2]
-Explanation: merged array = [1,2,3,4] and the median is (2 + 3) / 2 = 2.5. rotate right 2 times = [3, 4, 1, 2]
+Explanation: merged array = [1,2,3,4] and the median is (2 + 3) / 2 = 2.5
+rotate right 2 times = [3, 4, 1, 2]
 
 '''
 import numpy as np
