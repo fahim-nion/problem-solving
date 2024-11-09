@@ -1,4 +1,5 @@
-'''Q4) Given two sorted arrays arr1 and arr2, print the median of the two sorted arrays. Then rotate right the merged arrays floor(median) times
+'''Q4) Given two sorted arrays arr1 and arr2, print the median of the 
+two sorted arrays. Then rotate right the merged arrays floor(median) times
 
 def rotateMedian(arr1, arr2):
 #write code
