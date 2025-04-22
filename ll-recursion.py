@@ -20,3 +20,26 @@ n2.next = n3
 
 
 task_3A(n1)
+
+
+
+##############################
+
+#task 3b
+def task3B(head):
+  temp = head
+  if temp == None:
+    return
+  print(temp.elem, end =  "--→")
+  temp = temp.next
+  task3B(temp)
+
+n1 = Node(10)
+n2 = Node(20)
+n3 = Node(40)
+
+n1.next = n2
+n2.next = n3
+
+
+task_3A(n1)
