@@ -68,46 +68,43 @@ for i in range(0, len(result), 2):
 
 
 
-#rough
+rough
 
 
-# import numpy as np
-# class Node:
-#     def __init__(self,elem,next=None):
-#         self.elem = elem
-#         self.next = next
+import numpy as np
+class Node:
+    def __init__(self,elem,next=None):
+        self.elem = elem
+        self.next = next
 
 
-# def sum_pair_finder(head,sum_val):
-#     def len(head):
-#         temp = head
-#         c = 0
-#         while temp!= None:
-#             c+=1
-#             temp = temp.next
-#         return c
-#     new = np.array([0]*(2*len(head)),dtype=int)
-#     p = head
-#     # q = None
-#     counter = 0
-#     while p!= None:
-#         q = p.next
-#         while q!= None:
-#             if p.elem + q.elem == sum_val:
-#                 new[counter] ,new[counter+1] = p.elem,q.elem
-#                 counter+=2
-#             q = q.next
-#         p = p.next
-#     non_zero = 0
-#     for i in new:
-#         if i!=0:
-#             non_zero+=1
-#         else:
-#             return []
-#     return new[:non_zero]
-
-
-
+def sum_pair_finder(head,sum_val):
+    def len(head):
+        temp = head
+        c = 0
+        while temp!= None:
+            c+=1
+            temp = temp.next
+        return c
+    new = np.array([0]*(2*len(head)),dtype=int)
+    p = head
+    # q = None
+    counter = 0
+    while p!= None:
+        q = p.next
+        while q!= None:
+            if p.elem + q.elem == sum_val:
+                new[counter] ,new[counter+1] = p.elem,q.elem
+                counter+=2
+            q = q.next
+        p = p.next
+    non_zero = 0
+    for i in new:
+        if i!=0:
+            non_zero+=1
+        else:
+            return []
+    return new[:non_zero]
 
 
 
@@ -117,29 +114,32 @@ for i in range(0, len(result), 2):
 
 
 
-# def print_linked_list(head):
-#     temp = head
-#     while temp:
-#         print(temp.elem, end=" -> " if temp.next else "\n")
-#         temp = temp.next
 
 
-# head = Node(1)
-# head.next = Node(2)
-# head.next.next = Node(3)
-# head.next.next.next = Node(4)
-# head.next.next.next.next = Node(5)
+
+def print_linked_list(head):
+    temp = head
+    while temp:
+        print(temp.elem, end=" -> " if temp.next else "\n")
+        temp = temp.next
 
 
-# print("Original List:")
-# print_linked_list(head)
+head = Node(1)
+head.next = Node(2)
+head.next.next = Node(3)
+head.next.next.next = Node(4)
+head.next.next.next.next = Node(5)
 
-# result = sum_pair_finder(head, 5)
-# print("Rotated List:")
-# print_linked_list(result)
 
-# # Display the pairs stored in the NumPy array
-# for i in range(0, len(result), 2):
-#     print(f"({result[i]}, {result[i+1]})")
+print("Original List:")
+print_linked_list(head)
+
+result = sum_pair_finder(head, 5)
+print("Rotated List:")
+print_linked_list(result)
+
+# Display the pairs stored in the NumPy array
+for i in range(0, len(result), 2):
+    print(f"({result[i]}, {result[i+1]})")
 
 
