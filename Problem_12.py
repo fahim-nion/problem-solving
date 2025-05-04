@@ -4,28 +4,28 @@ import fhm_unittest as unittest
 import numpy as np
 
 def mergeSortedArray(arr1, arr2):
-    pointer1 = 0
-    pointer2 = 0
-    position = 0
+    p1 = 0
+    p2 = 0
+    pos = 0
     res = np.array([0]*(len(arr1) + len(arr2)), dtype= int)
 
-    while pointer1 < len(arr1) and pointer2 < len(arr2):
-        if arr1[pointer1]< arr2[pointer2]:
-            res[position] = arr1[pointer1]
-            pointer1 += 1
+    while p1 < len(arr1) and p2 < len(arr2):
+        if arr1[p1]< arr2[p2]:
+            res[pos] = arr1[p1]
+            p1 += 1
         else:
-            res[position] = arr2[pointer2]
-            pointer2 += 1
-        position +=1
+            res[pos] = arr2[p2]
+            p2 += 1
+        pos +=1
 
-    while pointer1 < len(arr1):
-        res[position] = arr1[pointer1]
-        pointer1+=1
-        position+=1
-    while pointer2 < len(arr2):
-        res[position] = arr2[pointer2]
-        pointer2+=1
-        position+=1
+    while p1 < len(arr1):
+        res[pos] = arr1[p1]
+        p1+=1
+        pos+=1
+    while p2 < len(arr2):
+        res[pos] = arr2[p2]
+        p2+=1
+        pos+=1
     return res
 
 a1 = np.array([1, 2, 3])
