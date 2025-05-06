@@ -11,7 +11,7 @@ def inorder(root):
     inorder(root.left)
     print(root.elem, end = ' ')
     inorder(root.right)
-  
+
 def tree_construction(arr, i = 1):
     if i>=len(arr) or arr[i] == None:
         return None
@@ -25,32 +25,26 @@ root2 = tree_construction([None, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', None, N
 inorder(root2)
 
 
-def convert_mirror(root):
+
+
+
+
+def smallest_level(root, level = {}, key = 0):
     if root == None:
         return
-    n = BTNode(root.elem)
-    n.left = convert_mirror(root.right)
-    n.right = convert_mirror(root.left)
-    return n
+    elif key not in level:
+        level[key]=root.elem
+    elif level[key] > root.elem:
+        level[key] = root.elem
+    lvl = smallest_level(root.left,level,key+1)
+    lvl = smallest_level(root.right,level,key+1)
+    return lvl
 
 
 #DRIVER CODE
-root = BTNode(10)
-n1 = BTNode(20)
-n2 = BTNode(30)
-n3 = BTNode(40)
-n4 = BTNode(60)
-
-root.left = n1
-root.right = n2
-
-n1.left = n3
-n1.right = n4
-
+root = tree_construction([None, 4,9,2,3,-5,None,7])
 print('Given Tree Inorder Traversal: ', end = ' ')
-inorder(root) #Given Tree Inorder Traversal:  40 20 60 10 30
+inorder(root) #Given Tree Inorder Traversal:  3 9 5 4 2 7
 print()
-
-root2 = convert_mirror(root)
-print('Mirrored Tree Inorder Traversal: ', end = ' ')
-inorder(root2) #Mirrored Tree Inorder Traversal:  30 10 60 20 40
+print('Level Wise Smallest Value: ', end = ' ')
+print(smallest_level(root)) #Level Wise Smallest Value:  {0: 4, 1: 2, 2: -5}
