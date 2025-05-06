@@ -29,6 +29,7 @@ print()
 def subtract_summation(root):
     l_sum = sum(root.left)
     r_sum = sum(root.right)
+    return l_sum - r_sum
     def sum(root):
         if root == None:
             return 0
