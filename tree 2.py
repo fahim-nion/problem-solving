@@ -34,11 +34,11 @@ def smallest_level(root, level = {}, key = 0):
         return
     elif key not in level:
         level[key]=root.elem
-    elif level[key] > root.elem:
-        level[key] = root.elem
-    lvl = smallest_level(root.left,level,key+1)
-    lvl = smallest_level(root.right,level,key+1)
-    return lvl
+    elif level[key] > root.elem:  #ekhane level[key] mane to lvl er key na ,
+        level[key] = root.elem    #remember key dhore call dile value ashe
+    smallest_level(root.left,level,key+1)
+    smallest_level(root.right,level,key+1)
+    return level
 
 
 #DRIVER CODE
