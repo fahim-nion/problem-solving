@@ -30,16 +30,41 @@ def subtract_summation(root):
     l_sum = sum(root.left)
     r_sum = sum(root.right)
     return l_sum - r_sum
-    def sum(root):
-        if root == None:
-            return 0
-        return root.elem + sum(root.left) + sum(root.right)
+
+def sum(root):
+    if root == None:
+        return 0
+    return root.elem + sum(root.left) + sum(root.right)
 
 
 
 #Driver Code
 root=BTNode(71)
-#Write other nodes by yourself from the given tree of Doc File
+n1 = BTNode(27)
+n2 = BTNode(62)
+n3 = BTNode(80)
+n4 = BTNode(75)
+n5 = BTNode(41)
+n6 = BTNode(3)
+n7 = BTNode(87)
+n8 = BTNode(56)
+n9 = BTNode(19)
+n10 = BTNode(89)
 
+
+root.left = n1
+root.right = n2
+
+n1.left = n3
+n1.right = n4
+
+n3.left = n7
+n3.right = n8
+
+n2.left = n5
+n2.right = n6
+
+n6.left = n9
+n6.right = n10
 
 print(subtract_summation(root)) #This should print 111
