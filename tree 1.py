@@ -54,3 +54,13 @@ print()
 root2 = convert_mirror(root)
 print('Mirrored Tree Inorder Traversal: ', end = ' ')
 inorder(root2) #Mirrored Tree Inorder Traversal:  30 10 60 20 40
+
+
+
+def convert_mirror(root):
+    if root == None:
+        return
+    root.left = root.right
+    root.right = root.left
+    convert_mirror(root.left)
+    convert_mirror(root.right)
