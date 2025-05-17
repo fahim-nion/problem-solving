@@ -19,3 +19,4 @@ def tree_construction(arr, i = 1):
     p.left = tree_construction(arr, 2*i)
     p.right = tree_construction(arr, 2*i+1)
     return p
+
