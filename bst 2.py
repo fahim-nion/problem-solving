@@ -4,4 +4,3 @@ def mirrorFree(root, e):
     if e < root.elem:
         l_t = mirrorFree(root.left,e) 
         
-        print(root)
