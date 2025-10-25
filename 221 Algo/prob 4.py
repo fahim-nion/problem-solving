@@ -49,3 +49,21 @@ YES
 
 
 '''
+
+
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    arr = list(map(int,input().split()))
+    
+    sorted = True
+    for i in range(N-1):
+        if arr[i]> arr[i+1]:
+            sorted = False
+            break
+        
+    if sorted:
+        print("YES")
+    else:
+        print("NO")
