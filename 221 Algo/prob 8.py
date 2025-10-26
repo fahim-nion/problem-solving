@@ -71,6 +71,5 @@ for i in range(n):
     if best != i:
         trains[i], trains[best] = trains[best], trains[i]
 
-
 for train in trains:
     print(train[3])
