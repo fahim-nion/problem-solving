@@ -1,1 +1,1 @@
-print("second week of solving")
+print("second week of solving algorithm problems")
