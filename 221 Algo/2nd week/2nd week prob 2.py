@@ -71,3 +71,27 @@ OutputCopy
 
 '''
 
+N,M,K = map(int,input().split())
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+
+i=0
+j=M-1
+best_i,best_j = 0,0
+best_diff = float('inf')
+
+while i<N and j>=0:
+    total= A[i] + B[j]
+    diff = abs(total -K)
+    if diff < best_diff:
+        best_diff = diff
+        best_i,best_j = i,j
+        
+    if total >K:
+        j-=1
+    elif total <K:
+        i+=1
+    else:
+        break
+    
+print(best_i+1,best_j+1)
