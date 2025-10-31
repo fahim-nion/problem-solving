@@ -49,3 +49,23 @@ Note
 In the second sample input, 4 5 is also a valid output.
 
 '''
+
+inp =list(map(int,input().split()))
+N = inp[0]
+S = inp[1]
+arr = list(map(int,input().split()))
+
+left = 0
+right = N-1
+
+while left<right:
+    total = arr[left] + arr[right]
+    if total == S:
+        print(left+1,right+1)
+        break
+    elif total < S:
+        left +=1
+    else:
+        right -=1
+else:
+    print(-1)
