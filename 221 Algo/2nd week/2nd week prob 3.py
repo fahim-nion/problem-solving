@@ -42,10 +42,28 @@ arr = list(map(int,input().split()))
 original_arr = []
 for i in range(n):
     original_arr.append((arr[i],i+1))
+    
+found = False
 
 original_arr.sort()
 for i in range(n):
     target = x-original_arr[i][0]
     left,right = i+1,n-1
+    
+    while left < right:
+        total = original_arr[left][0] + original_arr[right][0]
+        if total == target:
+            print(original_arr[i][1],original_arr[left][1],original_arr[right][1])
+            found = True
+            break
+        elif total < target:
+            left += 1
+        else:
+            right -=1
+    if found:
+        break
+            
+if not found:
+    print(-1)
     
     
