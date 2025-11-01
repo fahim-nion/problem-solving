@@ -49,3 +49,5 @@ In the third example, no subarray has sum less than or equal to 1. Hence, the an
 
 
 '''
+
+n,k = 
