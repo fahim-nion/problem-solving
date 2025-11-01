@@ -53,7 +53,9 @@ In the third example, no subarray has sum less than or equal to 1. Hence, the an
 n,k = map(int, input().split())
 arr = list(map(int, input().split()))
 
-left ,crrnt_sum,max_len = 0
+left=0
+crrnt_sum=0
+max_len = 0
 for i in range(n):
     crrnt_sum += arr[i]
     
