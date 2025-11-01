@@ -50,4 +50,18 @@ In the third example, no subarray has sum less than or equal to 1. Hence, the an
 
 '''
 
-n,k = 
+n,k = map(int, input().split())
+arr = list(map(int, input().split()))
+
+left ,crrnt_sum,max_len = 0
+for i in range(n):
+    crrnt_sum += arr[i]
+    
+    while crrnt_sum > k and left <= i:
+        crrnt_sum -= arr[left]
+        left+=1
+        
+    max_len = max(max_len, i-left+1)
+    
+print(max_len)
+    
